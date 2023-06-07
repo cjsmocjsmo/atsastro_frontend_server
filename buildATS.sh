@@ -18,6 +18,7 @@ else
     cd $HOME;
     git clone https://github.com/cjsmocjsmo/atsastro2.2.git;
     cd $atsastro;
+    npm install;
     npm run build;
     cp -pvr dist/* $FES/data/;
 fi
