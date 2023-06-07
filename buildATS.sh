@@ -15,6 +15,7 @@ if [ -d "$atsastro" ]; then
     cp -pvr dist/* $FES/data/;
 else
     echo "atsastro does not exist";
+    cd $HOME;
     git clone https://github.com/cjsmocjsmo/atsastro2.2.git;
     cd $atsastro;
     npm run build;
