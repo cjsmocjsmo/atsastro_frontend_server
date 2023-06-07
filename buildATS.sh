@@ -27,5 +27,5 @@ fi
 
 cd $FES;
 # git pull;
-# docker build -t $IMG .;
-# docker run -d -p 8789:8789 $IMG;
+docker build -t $IMG .;
+docker run -d -p 8789:8789 $IMG;
