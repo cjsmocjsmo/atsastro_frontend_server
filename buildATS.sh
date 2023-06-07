@@ -1,22 +1,22 @@
 #!/bin/sh
 
-astastro="/media/charliepi/HD/ats/atsastro2.2";
-FES="/media/charliepi/HD/ats/astastro_frontend_server";
+atsastro="/media/charliepi/HD/ats/atsastro2.2";
+FES="/media/charliepi/HD/ats/atsastro_frontend_server";
 VERSION="0.0.1";
-IMG="astastro_frontend_server:$VERSION";
+IMG="atsastro_frontend_server:$VERSION";
 
-# check if $astastro exists if $astastro exists echo "astastro exists" else echo "astastro does not exist"
+# check if $atsastro exists if $atsastro exists echo "atsastro exists" else echo "atsastro does not exist"
 
-if [ -d "$astastro" ]; then
-    echo "astastro exists";
-    cd $astastro;
+if [ -d "$atsastro" ]; then
+    echo "atsastro exists";
+    cd $atsastro;
     git pull;
     npm run build;
     cp -pvr dist/* $FES/data/;
 else
-    echo "astastro does not exist";
-    git clone https://github.com/cjsmocjsmo/astastro2.2.git;
-    cd $astastro;
+    echo "atsastro does not exist";
+    git clone https://github.com/cjsmocjsmo/atsastro2.2.git;
+    cd $atsastro;
     npm run build;
     cp -pvr dist/* $FES/data/;
 fi
