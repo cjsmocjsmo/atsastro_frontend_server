@@ -1,7 +1,7 @@
 #!/bin/sh
 
-atsastro="/media/charliepi/HD/ats/atsastro2.2";
-FES="/media/charliepi/HD/ats/atsastro_frontend_server";
+atsastro="$HOME/atsastro2.2";
+FES="$HOME/atsastro_frontend_server";
 VERSION="0.0.1";
 IMG="atsastro_frontend_server:$VERSION";
 
