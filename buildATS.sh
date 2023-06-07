@@ -7,6 +7,9 @@ VERSION="0.0.1";
 IMG="atsastro_frontend_server:$VERSION";
 
 # check if $atsastro exists if $atsastro exists echo "atsastro exists" else echo "atsastro does not exist"
+cd FES;
+git pull;
+
 
 if [ -d "$atsastro" ]; then
     echo "atsastro exists";
@@ -26,6 +29,5 @@ else
 fi
 
 cd $FES;
-# git pull;
 docker build -t $IMG .;
 docker run -d -p 8789:8789 $IMG;
