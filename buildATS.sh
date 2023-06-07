@@ -2,6 +2,7 @@
 
 atsastro="$HOME/atsastro2.2";
 FES="$HOME/atsastro_frontend_server";
+FESD="$HOME/atsastro_frontend_server/data";
 VERSION="0.0.1";
 IMG="atsastro_frontend_server:$VERSION";
 
@@ -20,6 +21,7 @@ else
     cd $atsastro;
     npm install;
     npm run build;
+    mkdir $FESD;
     cp -pvr dist/* $FES/data/;
 fi
 
